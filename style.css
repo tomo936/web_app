@@ -1,0 +1,62 @@
+html {
+    font-family: fantasy;
+  }
+  h1{
+    
+    color: aquamarine;
+  }
+
+  h2{
+    font-size: 20px;
+    text-align: left;
+    
+  }
+  body {
+   
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .form input[type="number"] {
+    width: 200px;
+    text-align: center;
+
+  }
+  
+  .lastResult {
+    color: white;
+    padding: 3px;
+    position: relative;
+  }
+  header{
+    
+    width: auto;
+    height: 150px;
+    background-color: aliceblue;
+    font-size: 28px;
+    text-align: center;
+    
+  }
+  .tears{
+    padding-top: 50px;
+    font-size: 50px;
+    
+    color: rgb(38, 42, 44);
+  }
+  .tearLevel{
+    font-size: 100px;
+    
+    color: blue;
+  }
+  .tear{
+    width: auto;
+    height: 1000px;
+    background-color: aliceblue;
+    font-size: 28px;
+    text-align: center;
+    
+  }
+  .title{
+    margin-top: auto;
+   
+  }
