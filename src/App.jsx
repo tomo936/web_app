@@ -1,7 +1,13 @@
 import React, { useState ,useRef} from "react";
-import Header from "./Header";
 import TearList from "./TearList";
+import Monster from "./Monster";
+import Monster2 from "./Monster2";
+import Monster3 from "./Monster3";
+import Monster4 from "./Monster4";
+
+
 import { v4 as uuidv4} from "uuid";
+
 
 
 function App(){
@@ -28,21 +34,36 @@ function App(){
     setTears(newTears);
   };
 
+  const devilrevel=tears.filter((tear)=>!tear.deletes).length;
+
+  const devil = () => {
+    if (devilrevel<2) {
+      return <Monster/>;
+    } else if(devilrevel<4) {
+      return <Monster2/>;
+    } else if(devilrevel<6){
+      return <Monster3/>;
+    }else if(devilrevel<8){
+      return <Monster4/>;
+    }
+    
+  };
+
   return (
     <div>
-      
-      
-      <Header/>
-      
-      <input type="text" ref={tearNameRef}/>
-      <button onClick={addTear}>涙</button>
-      <button onClick={Clear}>消す</button>
-      <div className="tearLevel">涙レベル:{tears.filter((tear)=>!tear.deletes).length}</div>
-      <TearList tears={tears}checkTear={checkTear}/>
-    
-   
      
-    
+      
+      <div className="bg">
+      <input type="text" ref={tearNameRef}/>
+     
+      <button onClick={addTear}>涙を流す</button>
+      <button onClick={Clear}>忘れる</button>
+      
+      <div className="tearLevel">涙レベル:{tears.filter((tear)=>!tear.deletes).length}</div>
+      {devil(devilrevel)}
+      <TearList tears={tears}checkTear={checkTear}/>
+      
+     </div>
     </div>
   );
 };

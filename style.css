@@ -1,20 +1,38 @@
 html {
     font-family: fantasy;
+    height: 100%;
   }
   h1{
+    margin-top: 0;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: rgb(116, 241, 243);
+    background-color:dimgray;
     
-    color: aquamarine;
   }
 
   h2{
     font-size: 20px;
+    color: rgb(255, 255, 255);
     text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    background-color: dimgray;
+
     
   }
   body {
-   
+    margin: 0px;
+    padding: 0px;
+    
+    height: 100%;
     text-align: center;
-    margin: 0 auto;
+    
   }
   
   .form input[type="number"] {
@@ -28,26 +46,33 @@ html {
     padding: 3px;
     position: relative;
   }
-  header{
+  head{
     
     width: auto;
-    height: 150px;
+    height: 80px;
     background-color: aliceblue;
     font-size: 28px;
     text-align: center;
     
+    
   }
   .tears{
-    padding-top: 50px;
-    font-size: 50px;
-    
+    padding-top: 30px;
+   
+    font-size: 30px;
+    background-image: url("https://ai-catcher.com/wp-content/uploads/2016/11/104.png");
+    background-size: 100px 100px;
+    background-position:  620px ;
+    background-repeat:no-repeat;
+    text-align: center;
     color: rgb(38, 42, 44);
   }
   .tearLevel{
-    font-size: 100px;
+    font-size: 30px;
     
-    color: blue;
+    color: rgb(49, 191, 251);
   }
+  
   .tear{
     width: auto;
     height: 1000px;
@@ -56,7 +81,18 @@ html {
     text-align: center;
     
   }
-  .title{
-    margin-top: auto;
-   
+  
+  .akuma{
+    height: 300px;
+    padding-top: -400px;
   }
+  
+.bg {
+  height: 1000px;
+  padding-top: 100px;
+  margin: 30px 0;
+  background-color: whitesmoke;
+  
+}
+
+
