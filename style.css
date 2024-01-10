@@ -1,4 +1,4 @@
-html {
+  html {
     font-family: fantasy;
     height: 100%;
   }
@@ -62,7 +62,7 @@ html {
     font-size: 30px;
     background-image: url("https://ai-catcher.com/wp-content/uploads/2016/11/104.png");
     background-size: 100px 100px;
-    background-position:  895px ;
+    background-position:  890px ;
     background-repeat:no-repeat;
     text-align: center;
     color: rgb(38, 42, 44);
@@ -87,12 +87,23 @@ html {
     padding-top: -400px;
   }
   
-.bg {
-  height: 1000px;
+  .bg {
+  height: 2000px;
   padding-top: 100px;
   margin: 30px 0;
   background-color: whitesmoke;
+  }
+
+  .Btear{
+    
+    
+    font-size: 20px;
+  }
+  .past{
+    color: darkblue;
+    padding-top: 50px;
+    font-size: 30px;
+  }
   
-}
 
 

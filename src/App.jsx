@@ -1,4 +1,4 @@
-import React, { useState ,useRef} from "react";
+import React, { useState ,useRef,useEffect} from "react";
 import TearList from "./TearList";
 import Monster from "./Monster";
 import Monster2 from "./Monster2";
@@ -6,21 +6,38 @@ import Monster3 from "./Monster3";
 import Monster4 from "./Monster4";
 
 
-import { v4 as uuidv4} from "uuid";
 
 
+var x=0;
 
 function App(){
+  
   const [tears, setTears] = useState([]);
   const tearNameRef=useRef();
+  while (localStorage.getItem(x)) {
+    console.log(localStorage.getItem(x));
+    x+=1;
+  }
+  useEffect(()=>{
+    
+    const data=window.localStorage.getItem(x);
+    if(data!=null)setTears(JSON.parse(data))
+  }, [])
+  
 
+  
+  
   const addTear = ()=>{
+    
      const name= tearNameRef.current.value;
+     localStorage.setItem(x,name);
      setTears((prevTears)=>{
-        return [...prevTears,{ id : uuidv4(),name:name,deletes:false}];
+        return [...prevTears,{ id : x,name:name,deletes:false}];
       });
       tearNameRef.current.value=null;
     };
+
+  
   
   const checkTear=(id)=>{
     const newTears=[...tears];
@@ -37,13 +54,13 @@ function App(){
   const devilrevel=tears.filter((tear)=>!tear.deletes).length;
 
   const devil = () => {
-    if (devilrevel<2) {
+    if (x<11) {
       return <Monster/>;
-    } else if(devilrevel<4) {
+    } else if(x<21) {
       return <Monster2/>;
-    } else if(devilrevel<6){
+    } else if(x<31){
       return <Monster3/>;
-    }else if(devilrevel<8){
+    }else if(x<41){
       return <Monster4/>;
     }
     
@@ -58,11 +75,27 @@ function App(){
      
       <button onClick={addTear}>涙を流す</button>
       <button onClick={Clear}>忘れる</button>
-      
-      <div className="tearLevel">涙レベル:{tears.filter((tear)=>!tear.deletes).length}</div>
+      <div className="tearLevel">心レベル:{x}</div>
       {devil(devilrevel)}
-      <TearList tears={tears}checkTear={checkTear}/>
-      
+      <TearList tears={tears} checkTear={checkTear}/>
+      <div className="past">過去</div>
+      <div className="Btear">{localStorage.getItem(0)}</div>
+      <div className="Btear">{localStorage.getItem(1)}</div>
+      <div className="Btear">{localStorage.getItem(2)}</div>
+      <div className="Btear">{localStorage.getItem(3)}</div>
+      <div className="Btear">{localStorage.getItem(4)}</div>
+      <div className="Btear">{localStorage.getItem(5)}</div>
+      <div className="Btear">{localStorage.getItem(6)}</div>
+      <div className="Btear">{localStorage.getItem(7)}</div>
+      <div className="Btear">{localStorage.getItem(8)}</div>
+      <div className="Btear">{localStorage.getItem(9)}</div>
+      <div className="Btear">{localStorage.getItem(10)}</div>
+      <div className="Btear">{localStorage.getItem(11)}</div>
+      <div className="Btear">{localStorage.getItem(12)}</div>
+      <div className="Btear">{localStorage.getItem(13)}</div>
+      <div className="Btear">{localStorage.getItem(14)}</div>
+      <div className="Btear">{localStorage.getItem(15)}</div>
+      <div className="Btear">{localStorage.getItem(16)}</div>
      </div>
     </div>
   );
