@@ -74,7 +74,7 @@ function App(){
       <input type="text" ref={tearNameRef}/>
      
       <button onClick={addTear}>涙を流す</button>
-      <button onClick={Clear}>忘れる</button>
+      <button onClick={Clear}>忘れる(消す)</button>
       <div className="tearLevel">心レベル:{x}</div>
       {devil(devilrevel)}
       <TearList tears={tears} checkTear={checkTear}/>
