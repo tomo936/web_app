@@ -56,11 +56,11 @@ function App(){
   const devil = () => {
     if (x<6) {
       return <Monster/>;
-    } else if(x<16) {
+    } else if(x<11) {
       return <Monster2/>;
-    } else if(x<21){
+    } else if(x<16){
       return <Monster3/>;
-    }else if(x<26){
+    }else if(x<21){
       return <Monster4/>;
     }
     
