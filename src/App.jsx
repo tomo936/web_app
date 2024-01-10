@@ -54,13 +54,13 @@ function App(){
   const devilrevel=tears.filter((tear)=>!tear.deletes).length;
 
   const devil = () => {
-    if (x<11) {
+    if (x<6) {
       return <Monster/>;
-    } else if(x<21) {
+    } else if(x<16) {
       return <Monster2/>;
-    } else if(x<31){
+    } else if(x<21){
       return <Monster3/>;
-    }else if(x<41){
+    }else if(x<26){
       return <Monster4/>;
     }
     
@@ -70,7 +70,7 @@ function App(){
     <div>
      
       
-      <div className="bg">
+     <div className="bg">
       <input type="text" ref={tearNameRef}/>
      
       <button onClick={addTear}>涙を流す</button>
@@ -96,6 +96,9 @@ function App(){
       <div className="Btear">{localStorage.getItem(14)}</div>
       <div className="Btear">{localStorage.getItem(15)}</div>
       <div className="Btear">{localStorage.getItem(16)}</div>
+      <div className="Btear">{localStorage.getItem(17)}</div>
+      <div className="Btear">{localStorage.getItem(18)}</div>
+      <div className="Btear">{localStorage.getItem(19)}</div>
      </div>
     </div>
   );
